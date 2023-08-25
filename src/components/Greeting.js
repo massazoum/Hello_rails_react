@@ -1,28 +1,22 @@
 import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import fetchRandomGreeting from '../actions/greetingActions';
+import { useDispatch, useSelector } from 'react-redux';
+import { receiveMessage } from '../redux/greetingSlice';
 
-function Greeting({ greeting, fetchRandomGreeting }) {
+const Greeting = () => {
+  const dispatch = useDispatch();
+  const message = useSelector((state) => state.greeting);
   useEffect(() => {
-    fetchRandomGreeting();
-  }, [fetchRandomGreeting]);
+    dispatch(receiveMessage());
+  }, [dispatch]);
 
   return (
     <div>
-      <h1>Welcome to you </h1>
-      <p>{greeting}</p>
+      <h1>{message.greeting}</h1>
+      <button type="button" onClick={() => dispatch(receiveMessage())}>
+        Greeting Message
+      </button>
     </div>
   );
-}
-
-Greeting.propTypes = {
-  greeting: PropTypes.string.isRequired,
-  fetchRandomGreeting: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = (state) => ({
-  greeting: state.greeting.greeting,
-});
-
-export default connect(mapStateToProps, { fetchRandomGreeting })(Greeting);
+export default Greeting;
