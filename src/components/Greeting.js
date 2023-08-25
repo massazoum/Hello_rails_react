@@ -10,7 +10,7 @@ function Greeting({ greeting, fetchRandomGreeting }) {
 
   return (
     <div>
-      <h1>Greeting Component</h1>
+      <h1>Greeting </h1>
       <p>{greeting}</p>
     </div>
   );
