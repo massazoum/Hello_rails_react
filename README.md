@@ -85,7 +85,7 @@ To run tests, run the following command:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-###Link to Hello-Rails-Backend App
+### Link to Hello-Rails-Backend App
 - [🚀 Link to Hello-Rails-Backend App](https://github.com/massazoum/hello-rails-back-end.git)
 
 ## 👥 Authors <a name="authors"></a>
