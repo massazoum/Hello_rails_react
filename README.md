@@ -20,7 +20,7 @@
 - [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
-# 📖 [NationsConnect] <a name="about-project"></a>
+# 📖 [hello-react-front-end] <a name="about-project"></a>
 
 > In this project we build simple react App that is displaying greetings randomly .
 
